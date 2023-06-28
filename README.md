@@ -28,3 +28,41 @@
 - PARCEL uses BABEL
 
 - JSX => React.createElement => ReactElement JS-Object => HTMLElement(render)
+
+# Namaste Food
+
+Header
+
+- Logo
+- Nav Items
+  Body
+- Search
+- Restaurant Conatiner
+- Restaurant Card
+  - Image
+  - Name of res, star rating, cuisine, dlivery time
+    Footer
+- Copyright
+- Links
+- Address
+- Contact
+
+Two types of Export/Import
+
+- Default Export/Import
+
+export deafult Component;
+import Component from "path";
+
+- Named Export/Import
+
+export const Component;
+import {Component} from "path";
+
+# React Hooks
+
+(Normal JS utility functions)
+Most IMP Hooks
+
+- useState() - Superpowerful State Variables in react
+- useEffect()
