@@ -66,3 +66,13 @@ Most IMP Hooks
 
 - useState() - Superpowerful State Variables in react
 - useEffect()
+
+- useEffect()
+  // if no dependency array => useEffect is called on every render.
+  // if dependency array is empty = [] => useeffect is called on initial render(just once)
+  // if dependency array is [....] => called everytime btnNameReact is updated.
+
+# 2 types Routing in Web Apps
+
+- Client side Routing - Responsible for Single Page Applications
+- Server side Routing
