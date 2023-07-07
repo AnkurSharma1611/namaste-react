@@ -19,7 +19,9 @@
   "homepage": "https://github.com/AnkurSharma1611/namaste-react#readme",
   "devDependencies": {
     "parcel": "^2.9.2",
-    "process": "^0.11.10"
+    "postcss": "^8.4.25",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.2"
   },
   "dependencies": {
     "react": "^18.2.0",
