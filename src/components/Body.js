@@ -26,8 +26,14 @@ const Body = () => {
     const json = await data.json();
 
     // Optional Chaning
-    setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    // setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    // setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setListOfRestaurant(
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestaurant(
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   const onlineStatus = useOnlineStatus();
@@ -89,15 +95,17 @@ const Body = () => {
       <div className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
           <Link
-            key={restaurant.data.id}
-            to={"/restaurants/" + restaurant.data.id}
+            // key={restaurant.data.id}
+            // to={"/restaurants/" + restaurant.data.id}
+            key={restaurant?.info.id}
+            to={"/restaurants/" + restaurant?.info.id}
           >
             {
               /* {If the reataurant is promoted then add a promoted label to it} */
-              restaurant.data.promoted ? (
-                <RestaurantCardPromoted resData={restaurant} />
+              restaurant?.info.promoted ? (
+                <RestaurantCardPromoted resData={restaurant?.info} />
               ) : (
-                <RestaurantCard resData={restaurant} />
+                <RestaurantCard resData={restaurant?.info} />
               )
             }
           </Link>
